@@ -1,0 +1,539 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Comparatives & Superlatives — Geology Worksheet</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Inter', sans-serif;
+    background: #f5f4f0;
+    color: #1a1a1a;
+    padding: 2rem 1rem;
+    font-size: 15px;
+    line-height: 1.7;
+  }
+
+  .page {
+    max-width: 780px;
+    margin: 0 auto;
+    background: white;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 16px rgba(0,0,0,0.08);
+  }
+
+  .page-header {
+    background: #D85A30;
+    padding: 2rem 2.5rem;
+    color: white;
+  }
+  .page-header .tag {
+    font-size: 11px; font-weight: 600; letter-spacing: 1.5px;
+    text-transform: uppercase; background: rgba(255,255,255,0.2);
+    display: inline-block; padding: 3px 10px; border-radius: 4px; margin-bottom: 0.75rem;
+  }
+  .page-header h1 { font-size: 24px; font-weight: 700; margin-bottom: 0.25rem; }
+  .page-header p { font-size: 13px; opacity: 0.85; }
+  .header-meta { display: flex; flex-wrap: wrap; gap: 1rem; margin-top: 1rem; font-size: 12px; opacity: 0.8; }
+  .header-meta span::before { content: "● "; }
+
+  .grammar-box {
+    background: #FFF8F5; border: 1.5px solid #F0997B;
+    border-radius: 8px; margin: 1.5rem 2.5rem; padding: 1.25rem 1.5rem;
+  }
+  .grammar-box h3 { font-size: 12px; font-weight: 600; color: #D85A30; text-transform: uppercase; letter-spacing: 0.8px; margin-bottom: 0.75rem; }
+  .grammar-grid { display: grid; grid-template-columns: 1fr 1fr 1fr; gap: 1rem; }
+  .grammar-col h4 { font-size: 12px; font-weight: 600; color: #993C1D; margin-bottom: 0.4rem; }
+  .grammar-col ul { list-style: none; font-size: 13px; color: #555; }
+  .grammar-col ul li { padding: 2px 0; }
+  .grammar-col ul li strong { color: #D85A30; }
+
+  .content { padding: 0 2.5rem 2.5rem; }
+
+  .section { margin-bottom: 2.5rem; }
+  .section-header { display: flex; align-items: center; gap: 0.75rem; margin-bottom: 1rem; padding-bottom: 0.5rem; border-bottom: 1.5px solid #F0997B; }
+  .section-num { background: #D85A30; color: white; width: 28px; height: 28px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 13px; font-weight: 700; flex-shrink: 0; }
+  .section-title { font-size: 15px; font-weight: 600; }
+  .section-instr { font-size: 13px; color: #666; margin-bottom: 1.25rem; font-style: italic; }
+
+  .ex-list { display: flex; flex-direction: column; gap: 0.65rem; }
+  .ex-item { display: flex; align-items: center; gap: 10px; background: #fafafa; border: 0.5px solid #e5e5e5; border-radius: 8px; padding: 0.65rem 1rem; flex-wrap: wrap; }
+  .ex-item.col { flex-direction: column; align-items: flex-start; }
+  .ex-letter { font-size: 12px; font-weight: 700; color: #D85A30; min-width: 20px; }
+  .ex-text { font-size: 14px; flex: 1; line-height: 2; display: flex; align-items: center; flex-wrap: wrap; gap: 4px; }
+
+  input[type="text"] {
+    border: none;
+    border-bottom: 2px solid #D85A30;
+    background: transparent;
+    font-family: 'Inter', sans-serif;
+    font-size: 14px;
+    color: #1a1a1a;
+    padding: 2px 6px;
+    min-width: 160px;
+    outline: none;
+    transition: border-color 0.2s, background 0.2s;
+  }
+  input[type="text"]:focus { border-bottom-color: #993C1D; background: #FFF8F5; border-radius: 4px 4px 0 0; }
+  input[type="text"].sm { min-width: 110px; }
+  input[type="text"].lg { min-width: 200px; }
+  input[type="text"].full { min-width: 100%; width: 100%; margin-top: 6px; }
+  input[type="text"].correct { border-bottom-color: #3B6D11 !important; background: #EAF3DE !important; border-radius: 4px 4px 0 0; }
+  input[type="text"].wrong { border-bottom-color: #A32D2D !important; background: #FCEBEB !important; border-radius: 4px 4px 0 0; }
+
+  textarea {
+    width: 100%; border: 1px solid #ddd; border-radius: 6px;
+    font-family: 'Inter', sans-serif; font-size: 14px; color: #1a1a1a;
+    padding: 8px 10px; resize: vertical; min-height: 72px; outline: none;
+    margin-top: 6px; transition: border-color 0.2s; background: #fafafa;
+  }
+  textarea:focus { border-color: #D85A30; background: white; }
+
+  .mc-options { display: flex; gap: 1.5rem; margin-top: 8px; flex-wrap: wrap; padding-left: 28px; }
+  .mc-option { display: flex; align-items: center; gap: 6px; font-size: 14px; cursor: pointer; }
+  .mc-option input[type="radio"] { accent-color: #D85A30; width: 16px; height: 16px; cursor: pointer; }
+
+  .hint { font-size: 12px; color: #D85A30; font-style: italic; font-weight: 500; white-space: nowrap; }
+
+  .word-bank { display: flex; flex-wrap: wrap; gap: 8px; padding: 0.75rem 1rem; background: #FFF8F5; border: 1px dashed #F0997B; border-radius: 8px; margin-bottom: 1.25rem; }
+  .word-bank-label { font-size: 12px; font-weight: 600; color: #993C1D; width: 100%; margin-bottom: 4px; }
+  .word { background: white; border: 1px solid #F0997B; color: #993C1D; font-size: 13px; font-weight: 500; padding: 3px 12px; border-radius: 20px; }
+
+  .email-card { background: #fafafa; border: 0.5px solid #ddd; border-radius: 8px; overflow: hidden; }
+  .email-header { background: #f0f0f0; padding: 0.5rem 1rem; font-size: 12px; color: #666; display: flex; gap: 2rem; border-bottom: 0.5px solid #ddd; flex-wrap: wrap; }
+  .email-body { padding: 1.25rem 1.5rem; font-size: 14px; line-height: 2.4; }
+
+  .speaking-item { background: #fafafa; border: 0.5px solid #e5e5e5; border-left: 3px solid #D85A30; border-radius: 0 8px 8px 0; padding: 0.85rem 1rem; margin-bottom: 0.75rem; }
+  .speaking-q { font-size: 14px; margin-bottom: 0.25rem; }
+
+  .check-btn { background: #D85A30; color: white; border: none; border-radius: 6px; padding: 8px 20px; font-size: 13px; font-weight: 600; cursor: pointer; margin-top: 1rem; font-family: 'Inter', sans-serif; transition: background 0.2s; }
+  .check-btn:hover { background: #993C1D; }
+
+  .score-bar { display: none; background: #EAF3DE; border: 1px solid #97C459; border-radius: 8px; padding: 0.65rem 1.25rem; margin-top: 0.75rem; font-size: 14px; color: #3B6D11; font-weight: 500; }
+
+  .bonus { background: #EAF3DE; border: 1px solid #97C459; border-radius: 10px; padding: 1.25rem 1.5rem; margin-top: 2rem; }
+  .bonus-header { display: flex; align-items: center; gap: 8px; margin-bottom: 0.5rem; }
+  .bonus h3 { font-size: 14px; font-weight: 600; color: #3B6D11; }
+  .bonus p { font-size: 13px; color: #3B6D11; line-height: 1.7; }
+
+  .answer-key { background: #1a1a1a; color: #f0f0f0; padding: 2rem 2.5rem; }
+  .answer-key h2 { font-size: 13px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; color: #F0997B; margin-bottom: 1.25rem; }
+  .answer-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 1.25rem; }
+  .answer-section h4 { font-size: 12px; color: #F0997B; font-weight: 600; margin-bottom: 0.5rem; text-transform: uppercase; letter-spacing: 0.5px; }
+  .answer-section ol { padding-left: 1.2rem; font-size: 13px; color: #ccc; line-height: 2.1; }
+  .answer-section ol li strong { color: #f0f0f0; }
+
+  @media (max-width: 600px) {
+    .content { padding: 0 1.25rem 1.5rem; }
+    .page-header { padding: 1.5rem 1.25rem; }
+    .grammar-grid { grid-template-columns: 1fr; }
+    .answer-grid { grid-template-columns: 1fr; }
+    .grammar-box { margin: 1rem 1.25rem; }
+    input[type="text"] { min-width: 120px; }
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; border-radius: 0; }
+    .answer-key { display: none; }
+    .check-btn { display: none; }
+    .score-bar { display: none !important; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <div class="page-header">
+    <div class="tag">Grammar Worksheet</div>
+    <h1>Comparatives &amp; Superlatives</h1>
+    <p>Practice in professional and geological contexts</p>
+    <div class="header-meta">
+      <span>Level: B1</span>
+      <span>Topic: Technology &amp; Geology</span>
+      <span>Skills: Grammar · Vocabulary · Writing · Speaking</span>
+    </div>
+  </div>
+
+  <div class="grammar-box">
+    <h3>Quick Reference</h3>
+    <div class="grammar-grid">
+      <div class="grammar-col">
+        <h4>Short adjectives (1 syllable)</h4>
+        <ul>
+          <li>hard → <strong>harder</strong> than</li>
+          <li>deep → <strong>the deepest</strong></li>
+          <li>big → <strong>bigger</strong> than</li>
+          <li>hot → <strong>the hottest</strong></li>
+        </ul>
+      </div>
+      <div class="grammar-col">
+        <h4>Long adjectives (2+ syllables)</h4>
+        <ul>
+          <li>accurate → <strong>more accurate</strong> than</li>
+          <li>complex → <strong>the most complex</strong></li>
+          <li>reliable → <strong>more reliable</strong> than</li>
+          <li>efficient → <strong>the most efficient</strong></li>
+        </ul>
+      </div>
+      <div class="grammar-col">
+        <h4>Irregular forms</h4>
+        <ul>
+          <li>good → <strong>better / the best</strong></li>
+          <li>bad → <strong>worse / the worst</strong></li>
+          <li>far → <strong>further / the furthest</strong></li>
+          <li>heavy → <strong>heavier / the heaviest</strong></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="content">
+
+    <!-- EX 1 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">1</div>
+        <div class="section-title">Fill in the blanks</div>
+      </div>
+      <p class="section-instr">Put the adjective in brackets in the correct comparative or superlative form. Click "Check answers" when done.</p>
+      <div class="ex-list">
+        <div class="ex-item">
+          <span class="ex-letter">A</span>
+          <div class="ex-text">Granite is <input type="text" id="e1a" placeholder="type here"> than sandstone. <span class="hint">(hard)</span></div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-letter">B</span>
+          <div class="ex-text">The Mariana Trench is <input type="text" id="e1b" placeholder="type here" class="lg"> place on Earth. <span class="hint">(deep)</span></div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-letter">C</span>
+          <div class="ex-text">This core sample is <input type="text" id="e1c" placeholder="type here"> than the previous one. <span class="hint">(long)</span></div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-letter">D</span>
+          <div class="ex-text">Among all minerals we tested, this one has <input type="text" id="e1d" placeholder="type here" class="lg"> crystal structure. <span class="hint">(complex)</span></div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-letter">E</span>
+          <div class="ex-text">The data from the new drill is <input type="text" id="e1e" placeholder="type here" class="lg"> than the old equipment. <span class="hint">(accurate)</span></div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-letter">F</span>
+          <div class="ex-text">Of all field trips this year, yesterday's was <input type="text" id="e1f" placeholder="type here" class="lg">. <span class="hint">(exhausting)</span></div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-letter">G</span>
+          <div class="ex-text">The volcanic rock is <input type="text" id="e1g" placeholder="type here"> than the sedimentary one. <span class="hint">(dense)</span></div>
+        </div>
+        <div class="ex-item">
+          <span class="ex-letter">H</span>
+          <div class="ex-text">This is <input type="text" id="e1h" placeholder="type here" class="lg"> report I have written in my career. <span class="hint">(important)</span></div>
+        </div>
+      </div>
+      <button class="check-btn" onclick="checkEx1()">Check answers ✓</button>
+      <div id="score1" class="score-bar"></div>
+    </div>
+
+    <!-- EX 2 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">2</div>
+        <div class="section-title">Choose the correct option</div>
+      </div>
+      <p class="section-instr">Select the correct form (a or b).</p>
+      <div class="ex-list">
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">1</span>
+            <span style="font-size:14px;">The new seismic equipment is ___ than the old one.</span>
+          </div>
+          <div class="mc-options">
+            <label class="mc-option"><input type="radio" name="q1" value="a"> a) more better</label>
+            <label class="mc-option"><input type="radio" name="q1" value="b"> b) better</label>
+          </div>
+        </div>
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">2</span>
+            <span style="font-size:14px;">This is ___ rock layer in the formation.</span>
+          </div>
+          <div class="mc-options">
+            <label class="mc-option"><input type="radio" name="q2" value="a"> a) the most thin</label>
+            <label class="mc-option"><input type="radio" name="q2" value="b"> b) the thinnest</label>
+          </div>
+        </div>
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">3</span>
+            <span style="font-size:14px;">Our team's analysis was ___ than the contractor's.</span>
+          </div>
+          <div class="mc-options">
+            <label class="mc-option"><input type="radio" name="q3" value="a"> a) more precise</label>
+            <label class="mc-option"><input type="radio" name="q3" value="b"> b) preciser</label>
+          </div>
+        </div>
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">4</span>
+            <span style="font-size:14px;">That was ___ earthquake in the region's history.</span>
+          </div>
+          <div class="mc-options">
+            <label class="mc-option"><input type="radio" name="q4" value="a"> a) the worse</label>
+            <label class="mc-option"><input type="radio" name="q4" value="b"> b) the worst</label>
+          </div>
+        </div>
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">5</span>
+            <span style="font-size:14px;">Fieldwork is ___ than lab work, in my opinion.</span>
+          </div>
+          <div class="mc-options">
+            <label class="mc-option"><input type="radio" name="q5" value="a"> a) more challenging</label>
+            <label class="mc-option"><input type="radio" name="q5" value="b"> b) challenginger</label>
+          </div>
+        </div>
+      </div>
+      <button class="check-btn" onclick="checkEx2()">Check answers ✓</button>
+      <div id="score2" class="score-bar"></div>
+    </div>
+
+    <!-- EX 3 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">3</div>
+        <div class="section-title">Spot and correct the mistake</div>
+      </div>
+      <p class="section-instr">Each sentence has ONE mistake. Type the corrected sentence in the field below each one.</p>
+      <div class="ex-list">
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">1</span>
+            <span style="font-style:italic;font-size:14px;color:#555;">"This project has a most tight deadline than the last one."</span>
+          </div>
+          <input type="text" id="e3a" placeholder="Write the corrected sentence..." class="full">
+        </div>
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">2</span>
+            <span style="font-style:italic;font-size:14px;color:#555;">"She is the experienceder geologist on our team."</span>
+          </div>
+          <input type="text" id="e3b" placeholder="Write the corrected sentence..." class="full">
+        </div>
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">3</span>
+            <span style="font-style:italic;font-size:14px;color:#555;">"The second proposal is more good than the first."</span>
+          </div>
+          <input type="text" id="e3c" placeholder="Write the corrected sentence..." class="full">
+        </div>
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">4</span>
+            <span style="font-style:italic;font-size:14px;color:#555;">"That meeting was the more boring I've attended this year."</span>
+          </div>
+          <input type="text" id="e3d" placeholder="Write the corrected sentence..." class="full">
+        </div>
+        <div class="ex-item col">
+          <div style="display:flex;gap:10px;align-items:flex-start;width:100%;">
+            <span class="ex-letter">5</span>
+            <span style="font-style:italic;font-size:14px;color:#555;">"Our new lab is more big than the old one."</span>
+          </div>
+          <input type="text" id="e3e" placeholder="Write the corrected sentence..." class="full">
+        </div>
+      </div>
+    </div>
+
+    <!-- EX 4 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">4</div>
+        <div class="section-title">Complete the professional email</div>
+      </div>
+      <p class="section-instr">Fill in the gaps using the words from the word bank in the correct comparative or superlative form.</p>
+      <div class="word-bank">
+        <span class="word-bank-label">Word bank</span>
+        <span class="word">efficient</span>
+        <span class="word">reliable</span>
+        <span class="word">expensive</span>
+        <span class="word">good</span>
+        <span class="word">fast</span>
+        <span class="word">bad</span>
+      </div>
+      <div class="email-card">
+        <div class="email-header">
+          <span><strong>To:</strong> dr.silva@geotech.com</span>
+          <span><strong>Subject:</strong> Drilling Method Recommendation</span>
+        </div>
+        <div class="email-body">
+          <p>Dear Dr. Silva,</p><br>
+          <p>I am writing to recommend a new drilling method for our next project. After comparing both options carefully, I believe Method B is the <input type="text" id="e4a" placeholder="..." class="sm"> choice for our team.</p><br>
+          <p>It is <input type="text" id="e4b" placeholder="..." class="sm"> than Method A and produces results in half the time. The process is also <input type="text" id="e4c" placeholder="..." class="sm">, which means we can complete the survey in fewer working days.</p><br>
+          <p>Although it is slightly <input type="text" id="e4d" placeholder="..." class="sm"> to set up, the <input type="text" id="e4e" placeholder="..." class="sm"> data it provides is worth the investment. By contrast, Method A showed serious accuracy problems — in fact, it gave us <input type="text" id="e4f" placeholder="..." class="sm"> results we have ever recorded in the field.</p><br>
+          <p>I am happy to discuss this further at our next meeting.</p><br>
+          <p>Best regards,<br><em>Ana</em></p>
+        </div>
+      </div>
+      <button class="check-btn" onclick="checkEx4()">Check answers ✓</button>
+      <div id="score4" class="score-bar"></div>
+    </div>
+
+    <!-- EX 5 -->
+    <div class="section">
+      <div class="section-header">
+        <div class="section-num">5</div>
+        <div class="section-title">Free production — Writing &amp; Speaking</div>
+      </div>
+      <p class="section-instr">Answer each question in 2–3 full sentences. Use at least one comparative or superlative in each answer.</p>
+      <div class="speaking-item">
+        <p class="speaking-q"><strong>1.</strong> Compare fieldwork and lab work. Which do you prefer and why?</p>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
+      <div class="speaking-item">
+        <p class="speaking-q"><strong>2.</strong> What is the most interesting geological formation you have studied or visited?</p>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
+      <div class="speaking-item">
+        <p class="speaking-q"><strong>3.</strong> Compare two tools or technologies you use in your work as a geologist.</p>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
+      <div class="speaking-item">
+        <p class="speaking-q"><strong>4.</strong> What has been the most challenging project you have worked on? What made it difficult?</p>
+        <textarea placeholder="Write your answer here..."></textarea>
+      </div>
+    </div>
+
+    <div class="bonus">
+      <div class="bonus-header">
+        <span style="font-size:16px;">★</span>
+        <h3>Bonus — Discussion challenge</h3>
+      </div>
+      <p>Think about climate change and its geological effects. Are earthquakes becoming more frequent? Is sea level rising faster than before? Use at least <strong>5 comparatives or superlatives</strong> to discuss this topic with your teacher.</p>
+      <textarea placeholder="Write your ideas here..." style="margin-top:10px;background:white;border-color:#97C459;"></textarea>
+    </div>
+
+  </div>
+
+  <div class="answer-key">
+    <h2>Answer Key — Teacher's Reference</h2>
+    <div class="answer-grid">
+      <div class="answer-section">
+        <h4>Exercise 1 — Fill in the blanks</h4>
+        <ol type="A">
+          <li><strong>harder</strong></li>
+          <li><strong>the deepest</strong></li>
+          <li><strong>longer</strong></li>
+          <li><strong>the most complex</strong></li>
+          <li><strong>more accurate</strong></li>
+          <li><strong>the most exhausting</strong></li>
+          <li><strong>denser</strong></li>
+          <li><strong>the most important</strong></li>
+        </ol>
+      </div>
+      <div class="answer-section">
+        <h4>Exercise 2 — Multiple choice</h4>
+        <ol>
+          <li><strong>b) better</strong></li>
+          <li><strong>b) the thinnest</strong></li>
+          <li><strong>a) more precise</strong></li>
+          <li><strong>b) the worst</strong></li>
+          <li><strong>a) more challenging</strong></li>
+        </ol>
+      </div>
+      <div class="answer-section">
+        <h4>Exercise 3 — Correct the mistakes</h4>
+        <ol>
+          <li>a <strong>tighter</strong> deadline than</li>
+          <li>the <strong>most experienced</strong> geologist</li>
+          <li>is <strong>better</strong> than</li>
+          <li>was <strong>the most boring</strong></li>
+          <li>is <strong>bigger</strong> than</li>
+        </ol>
+      </div>
+      <div class="answer-section">
+        <h4>Exercise 4 — Email</h4>
+        <ol>
+          <li><strong>the best</strong> choice</li>
+          <li><strong>more efficient</strong> than</li>
+          <li><strong>faster</strong></li>
+          <li><strong>more expensive</strong></li>
+          <li><strong>more reliable</strong></li>
+          <li><strong>the worst</strong> results</li>
+        </ol>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function norm(s) { return s.trim().toLowerCase().replace(/\s+/g,' '); }
+
+  const ans1 = {
+    e1a: ["harder"],
+    e1b: ["the deepest"],
+    e1c: ["longer"],
+    e1d: ["the most complex"],
+    e1e: ["more accurate"],
+    e1f: ["the most exhausting"],
+    e1g: ["denser"],
+    e1h: ["the most important"]
+  };
+
+  function checkEx1() {
+    let ok = 0;
+    for (const [id, accepted] of Object.entries(ans1)) {
+      const el = document.getElementById(id);
+      const v = norm(el.value);
+      if (!v) { el.className = ''; continue; }
+      el.className = accepted.includes(v) ? 'correct' : 'wrong';
+      if (accepted.includes(v)) ok++;
+    }
+    const bar = document.getElementById('score1');
+    bar.style.display = 'block';
+    bar.textContent = ok + ' / 8 correct' + (ok === 8 ? ' 🎉 Perfect!' : ' — keep trying!');
+  }
+
+  const ans2 = { q1:'b', q2:'b', q3:'a', q4:'b', q5:'a' };
+
+  function checkEx2() {
+    let ok = 0;
+    for (const [name, correct] of Object.entries(ans2)) {
+      const sel = document.querySelector('input[name="'+name+'"]:checked');
+      if (sel && sel.value === correct) ok++;
+    }
+    const bar = document.getElementById('score2');
+    bar.style.display = 'block';
+    bar.textContent = ok + ' / 5 correct' + (ok === 5 ? ' 🎉 Perfect!' : ' — keep trying!');
+  }
+
+  const ans4 = {
+    e4a: ["the best"],
+    e4b: ["more efficient"],
+    e4c: ["faster"],
+    e4d: ["more expensive"],
+    e4e: ["more reliable"],
+    e4f: ["the worst"]
+  };
+
+  function checkEx4() {
+    let ok = 0;
+    for (const [id, accepted] of Object.entries(ans4)) {
+      const el = document.getElementById(id);
+      const v = norm(el.value);
+      if (!v) { el.className = 'sm'; continue; }
+      el.className = accepted.includes(v) ? 'sm correct' : 'sm wrong';
+      if (accepted.includes(v)) ok++;
+    }
+    const bar = document.getElementById('score4');
+    bar.style.display = 'block';
+    bar.textContent = ok + ' / 6 correct' + (ok === 6 ? ' 🎉 Perfect!' : ' — keep trying!');
+  }
+</script>
+</body>
+</html>
